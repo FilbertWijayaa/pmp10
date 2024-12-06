@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fw/ui/game_list.dart';
 import 'package:fw/ui/home.dart';
-import 'package:fw/ui/product_homepage.dart'; // Make sure this import points to the correct Home page.
+import 'package:fw/ui/product_homepage.dart'; //
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      //home: MyHomePage(),
+      home: GameList(),
     );
   }
 }
@@ -37,10 +39,9 @@ class MyHomePage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Navigasi ke halaman HomePage saat tombol ditekan
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProductHomepage()), // Make sure ProductHomepage is defined
+                  MaterialPageRoute(builder: (context) => GameList()),
                 );
               },
               child: Text('Ke Halaman Home'),
